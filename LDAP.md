@@ -38,3 +38,7 @@
 - para reconfigurar es con los comandos: **dpkg-reconfigure nslcd y dpkg-reconfigure libnss-ldapd**
 - vamos al archivo **nano /usr/share/pam-configs/mkhomedir** y en la última fila al final de todo añadimos: **umask=0077**
 - salimos del archivo e introducimos **pam-auth-update --enable mkhomedir** y después **pam-auth-update** y reiniciamos el equipo cliente.
+## Creación de carpetas
+- creamos las carpetas debajo de mnt.
+- con **fdisk /dev/sdb** entramos para crear las particiones.
+- con **mkfs.ext4 /dev/sdb5** formateamos las particiones
