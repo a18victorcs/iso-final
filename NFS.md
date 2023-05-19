@@ -13,11 +13,12 @@
 ## Configuración del cliente
 - **apt install nfs-common** instalamos este paquete
 - **showmount -e servidor.ejemplo.local** para ver que carpetas se están compartiendo
+- el montar la carpeta en el cliente dentro del fichero fstab no es obligatorio hacerlo.
 - **mount -t nfs servidor.ejemplo.local:/mnt/carpeta_compartida /mnt/carpeta_en_cliente**
 - **nano /etc/fstab** vamos al fichero e introducimos:
   - **servidor.ejemplo.local:/mnt/carpeta_compartida /mnt/carpeta_en_cliente nfs defaults 0 0**
 - **mount -a** para comprobar que el fichero fstab está bien
-- el montar la carpeta en el cliente dentro del fichero fstab no es obligatorio hacerlo.
+
 
 ## Permisos en el servidor
 - **apt install libpam-ldapd** instalamos este paquete en el servidor como hicimos en el cliente y reiniciamos el servidor.
