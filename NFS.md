@@ -21,7 +21,7 @@
 
 
 ## Permisos en el servidor
-- **apt install libpam-ldapd** instalamos este paquete en el servidor como hicimos en el cliente y reiniciamos el servidor.
+- **apt install libpam-ldapd** instalamos este paquete en el servidor como hicimos en el cliente y reiniciamos el servidor. cuando nos aparece para introducir la dirección/dominio, tenemos que quitarle i a **ldapi**
 - **chgrp grupo /mnt/carpeta_compartida/carpeta_compartida** cambiamos los propietarios de las carpetas.
 - **chmod 700 /mnt/carpeta_compartida** cambiamos los permisos a las carpetas.
 - hacemos lo mismo con las subcarpetas
