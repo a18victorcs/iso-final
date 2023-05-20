@@ -15,7 +15,7 @@
 - Instalamos el ssh >> **apt install openssh-server**. Instalamos las guest additions: introducimos el disco, **mount /media/cdrom, cp /media/cdrom/VBoxLinux /root, ./VBoxLinux**
 - reiniciamos el equipo
 - **apt install slapd ldap-utils** (para instalar el ldap en el servidor)
-- **slapcat** (para comprobar que todo se ha instalado bien) "dpkg-reconfigure **slapd**" (para comprobar que está todo bien configurado.)
+- **slapcat** (para comprobar que todo se ha instalado bien) **dpkg-reconfigure slapd** (por si hay algo que no está bien configurado.)
 - **apt install ldap-account-manager** (para poder configurar el LDAP desde el navegador del cliente.)
 - vamos al navegador del cliente y en la barra de búsqueda introducimos la dirección (servidor.ejemplo.local/lam)
 - vamos a **LAM configuration** y **Edit server profiles**. introducimos la contraseña **lam**
