@@ -35,6 +35,7 @@
 - **nano /etc/security/pam_mount.conf.xml** editamos este fichero y añadimos después de "volume definitions": 
 - ```<volume server="ip" gid="10000" fstype="cifs" path="carpeta_compartida (solo se indica el nombre del recurso compartido, no toda la ruta)" mountpoint="carpeta_en_cliente"/>```
 - (hay que hacerlo con las carpetas que querramos compartir)
+![pam_mount](/img/pam_mount.png)
 ## Comprobación que todo está bien
 - *Comprobación desde Linux*
   - Entramos en el cliente con un usuario del LDAP y vamos al nautilus para comprobar que montó las carpetas.
