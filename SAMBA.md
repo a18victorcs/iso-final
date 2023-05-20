@@ -13,10 +13,10 @@
 - salimos del archivo y comprobamos con **testparm** que todo va bien.
 - reiniciamos samba con
   - **/etc/init.d/smbd restart**
-  - **/etc/init.d/nmdb restart**
+  - **/etc/init.d/nmbd restart**
 - **apt install smbclient** instalamos este paquete
-- **smbclient -L //ip** ejecutamos este comando para ver que carpetas están compartidas. Cuando pide la contraseña del root no hace falta introducir la contraseña.
-- Hay que añadir usuarios a samba (se añade el admin):
+- **smbclient -L servidor.ejemplo.local** ejecutamos este comando para ver que carpetas están compartidas. Cuando pide la contraseña del root no hace falta introducir la contraseña.
+- Hay que añadir usuarios a samba (se crea uno nuevo):
   - **smbpasswd -a usuario**
   - **smbpasswd -e usuario**
   - una vez añadido a la base de datos de samba para ver los usuarios es con **pdbedit -L**, para borrar algún usuario es **smbpasswd -x usuario** y para desabilitar usuarios es **smbpasswd -d usuario**.
@@ -33,7 +33,7 @@
 ## Montar las carpetas sin tener que hacer los pasos del nautilus
 - **apt install libpam-mount**
 - **nano /etc/security/pam_mount.conf.xml** editamos este fichero y añadimos después de *volume definitions*:
-  - <volume server="ip" gid="10000" fstype="cifs" path="carpeta_compartida (solo se indica el nombre del recurso compartido, no toda la ruta)" mountpoint="carpeta_en_local"/> (hay que hacerlo con las carpetas que querramos compartir)
+- <volume server="ip" gid="10000" fstype="cifs" path="carpeta_compartida (solo se indica el nombre del recurso compartido, no toda la ruta)" mountpoint="carpeta_en_local"/> (hay que hacerlo con las carpetas que querramos compartir)
 ## Comprobación que todo está bien
 - *Comprobación desde Linux*
   - Entramos en el cliente con un usuario del LDAP y vamos al nautilus para comprobar que montó las carpetas.
