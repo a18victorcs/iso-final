@@ -16,7 +16,7 @@
   - **/etc/init.d/nmbd restart**
 - **apt install smbclient** instalamos este paquete
 - **smbclient -L servidor.ejemplo.local** ejecutamos este comando para ver que carpetas están compartidas. Cuando pide la contraseña del root no hace falta introducir la contraseña.
-- Hay que añadir usuarios a samba (se crea uno nuevo):
+- Hay que añadir usuarios a samba (los mismos que hay en el LDAP)):
   - **smbpasswd -a usuario**
   - **smbpasswd -e usuario**
   - una vez añadido a la base de datos de samba para ver los usuarios es con **pdbedit -L**, para borrar algún usuario es **smbpasswd -x usuario** y para desabilitar usuarios es **smbpasswd -d usuario**.

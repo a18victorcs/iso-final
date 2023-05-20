@@ -12,10 +12,16 @@
   - aquí tenemos que añadir el domain y search con el nombre del dominio (ejemplo.local) y en nameserve las ip para la comprobación que todo funciona bien.
   - **systemctl restart networking.service** (para reiniciar el servicio de internet)
   - **apt update**
-- Instalamos el ssh >> **apt install openssh-server**. Instalamos las guest additions: introducimos el disco, **mount /media/cdrom, cp /media/cdrom/VBoxLinux /root, ./VBoxLinux**
+- **apt install openssh-server** Para instalar el servidor ssh 
+- Instalamos las guest additions:
+  - Introducimos el disco
+  - **mount /media/cdrom**
+  - **cp /media/cdrom/VBoxLinux /root**
+  - **./VBoxLinux**
 - reiniciamos el equipo
 - **apt install slapd ldap-utils** (para instalar el ldap en el servidor)
-- **slapcat** (para comprobar que todo se ha instalado bien) **dpkg-reconfigure slapd** (por si hay algo que no está bien configurado.)
+- **slapcat** (para comprobar que todo se ha instalado bien)
+  - **dpkg-reconfigure slapd** (por si hay algo que no está bien configurado.)
 - **apt install ldap-account-manager** (para poder configurar el LDAP desde el navegador del cliente.)
 - vamos al navegador del cliente y en la barra de búsqueda introducimos la dirección (servidor.ejemplo.local/lam)
 - vamos a **LAM configuration** y **Edit server profiles**. introducimos la contraseña **lam**

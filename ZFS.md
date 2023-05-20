@@ -54,6 +54,6 @@
 - **zfs get sharsmb zdata/carpeta_compartida** comprobar que ya no está compartiendo
 - **zfs destoy zdata/carpeta_compartida** destruírlo
 - **nano /etc/security/pam_mount.conf.xml** editamos este fichero e introducimos después de "volume definitions"
-- ```<volume server="ip" gid="10000" fstype="cifs" path="carpeta_compartida" mountpoint="/home/ejemplo.local/%(USER)/carpeta_en_cliente/>
+- ```<volume server="ip" gid="10000" fstype="cifs" path="carpeta_compartida" mountpoint="/home/ejemplo.local/%(USER)/carpeta_en_cliente/>```
 ### Cliente samba
 - **apt install samba-common cifs-utils smbclient**
