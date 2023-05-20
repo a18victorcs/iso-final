@@ -29,7 +29,7 @@
 - Una vez configurado eso, le damos a save
 - introducimos la contraseña del administrador de LDAP.
 - pulsamos el botón de create.
-- en **Account**, creamos los grupos y los usuarios. cuando creamos los grupos, en el apartado unix, tenemos que modificar también el apartado **home directoy** y añadir antes del nombre del usuario el nombre del dominio (/home/ejemplo.local/$user)
+- en **Account**, creamos los grupos y los usuarios. cuando creamos los usuarios, en el apartado unix, tenemos que modificar también el apartado **home directoy** y añadir antes del nombre del usuario el nombre del dominio (/home/ejemplo.local/$user)
 - una vez añadimos los usuarios y los grupos, podemos salir del navegador web.
 - en el cliente instalamos **apt install libpam-ldapd** para hacer que el cliente se pueda validar contra el servidor LDAP.
   - cuando nos pide una ip podemos introducir la ip del servidor o la dirección del dominio.
