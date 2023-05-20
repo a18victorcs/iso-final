@@ -32,7 +32,8 @@
 - Abrimos el nautilus, nos desplazamos a otras ubicaciones, en la parte inferior sale la opción para conectarnos al servidor. introducimos: **smb://ip/** para acceder al servidor. De esta forma nos aparece una ventana para autenticarnos, tenemos que introducir las credenciales que pusimos en el fichero archivo_con_credenciales.txt
 ## Montar las carpetas sin tener que hacer los pasos del nautilus
 - **apt install libpam-mount**
-- **nano /etc/security/pam_mount.conf.xml** editamos este fichero y añadimos después de *volume definitions*: <volume server="ip" gid="10000" fstype="cifs" path="carpeta_compartida (solo se indica el nombre del recurso compartido, no toda la ruta)" mountpoint="carpeta_en_local"/> (hay que hacerlo con las carpetas que querramos compartir)
+- **nano /etc/security/pam_mount.conf.xml** editamos este fichero y añadimos después de *volume definitions*: <volume server="ip" gid="10000" fstype="cifs" path="carpeta_compartida (solo se indica el nombre del recurso compartido, no toda la ruta)" mountpoint="carpeta_en_local"/>
+- (hay que hacerlo con las carpetas que querramos compartir)
 ## Comprobación que todo está bien
 - *Comprobación desde Linux*
   - Entramos en el cliente con un usuario del LDAP y vamos al nautilus para comprobar que montó las carpetas.
