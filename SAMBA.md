@@ -26,7 +26,7 @@
 - En samba tenemos que montar a mano las carpetas:
   - vamos al archivo **/etc/fstab**
   - *//ip/carpeta_compartida /carpeta_en_local cifs defaults,username=usuario,password=contraseña 0 0*
-  - *//ip/carpeta_compartida /carpeta_en_local cifs defaults,credentials=archivo_con_credenciales.txt 0 0* en el archivo_con_credenciales.txt hay que introducir el usuario y la contraseña en líneas diferentes. cambiamos los permisos a 600 en el fichero.
+  - *//ip/carpeta_compartida /carpeta_en_local cifs defaults,credentials=archivo_con_credenciales.txt 0 0* en el archivo_con_credenciales.txt hay que introducir el usuario y la contraseña en líneas diferentes, username=usuario y passwd=contraseña. cambiamos los permisos a 600 en el fichero.
   - **mount -a** para comprobar que no hay ningún error
   - **mount** para comprobar que está montado
 - Abrimos el nautilus, nos desplazamos a otras ubicaciones, en la parte inferior sale la opción para conectarnos al servidor. introducimos: **smb://ip/** para acceder al servidor. De esta forma nos aparece una ventana para autenticarnos, tenemos que introducir las credenciales que pusimos en el fichero archivo_con_credenciales.txt
