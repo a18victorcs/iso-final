@@ -33,7 +33,7 @@
 ## Montar las carpetas sin tener que hacer los pasos del nautilus
 - **apt install libpam-mount**
 - **nano /etc/security/pam_mount.conf.xml** editamos este fichero y añadimos después de "volume definitions": 
-- ```<volume server="ip" gid="10000" fstype="cifs" path="carpeta_compartida (solo se indica el nombre del recurso compartido, no toda la ruta)" mountpoint="carpeta_en_local"/>```
+- ```<volume server="ip" gid="10000" fstype="cifs" path="carpeta_compartida (solo se indica el nombre del recurso compartido, no toda la ruta)" mountpoint="carpeta_en_cliente"/>```
 - (hay que hacerlo con las carpetas que querramos compartir)
 ## Comprobación que todo está bien
 - *Comprobación desde Linux*
