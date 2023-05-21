@@ -22,7 +22,7 @@
   - una vez añadido a la base de datos de samba para ver los usuarios es con **pdbedit -L**, para borrar algún usuario es **smbpasswd -x usuario** y para desabilitar usuarios es **smbpasswd -d usuario**.
 ## Desde un cliente:
 - **apt install samba-common smbclient cifs-utils**
-- **smbclient -L //ip** para ver los recursos compartidos
+- **smbclient -L servidor.ejemplo.local** para ver los recursos compartidos
 - En samba tenemos que montar a mano las carpetas:
   - vamos al archivo **/etc/fstab**
   - *//ip/carpeta_compartida /carpeta_en_local cifs defaults,username=usuario,password=contraseña 0 0*
