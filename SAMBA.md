@@ -20,7 +20,10 @@
 - Hay que añadir usuarios a samba (los mismos que hay en el LDAP):
   - **smbpasswd -a usuario**
   - **smbpasswd -e usuario**
-  - una vez añadido a la base de datos de samba para ver los usuarios es con **pdbedit -L**, para borrar algún usuario es **smbpasswd -x usuario** y para desabilitar usuarios es **smbpasswd -d usuario**.
+  - una vez añadido a la base de datos de samba para ver los usuarios es con **pdbedit -L**, para borrar algún usuario es **smbpasswd -x usuario** y para desabilitar usuarios es  **smbpasswd-d usuario**.
+- **chgrp grupo /mnt/carpeta_compartida/carpeta_compartida** cambiamos los propietarios de las carpetas.
+- **chmod 700 /mnt/carpeta_compartida** cambiamos los permisos a las carpetas.
+- hacemos lo mismo con las subcarpetas
 ## Desde un cliente:
 - **apt install samba-common smbclient cifs-utils**
 - **smbclient -L servidor.ejemplo.local** para ver los recursos compartidos
