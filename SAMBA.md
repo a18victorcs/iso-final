@@ -1,7 +1,8 @@
 # SAMBA
 ## Instalación de samba en el servidor
 - **apt install samba**
-- **nano /etc/samba/smb.conf** editamos este fichero y añadimos al final de todo:
+- **nano /etc/samba/smb.conf** editamos este fichero y añadimos al final de todo (no hay que añadir todo):
+  - En el apartado de WORKGROUP hay que poner el nombre del dominio sin el .local
   - [Carpeta_compartida]
     - comment = "algún comentario que querramos hacer sobre la carpeta"
     - path = "dirección donde está la carpeta compartida"
@@ -16,7 +17,7 @@
   - **/etc/init.d/nmbd restart**
 - **apt install smbclient** instalamos este paquete
 - **smbclient -L servidor.ejemplo.local** ejecutamos este comando para ver que carpetas están compartidas. Cuando pide la contraseña del root no hace falta introducir la contraseña.
-- Hay que añadir usuarios a samba (los mismos que hay en el LDAP)):
+- Hay que añadir usuarios a samba (los mismos que hay en el LDAP):
   - **smbpasswd -a usuario**
   - **smbpasswd -e usuario**
   - una vez añadido a la base de datos de samba para ver los usuarios es con **pdbedit -L**, para borrar algún usuario es **smbpasswd -x usuario** y para desabilitar usuarios es **smbpasswd -d usuario**.
@@ -34,6 +35,10 @@
 - **apt install libpam-mount**
 - **nano /etc/security/pam_mount.conf.xml** editamos este fichero y añadimos después de "volume definitions": 
 - ```<volume server="ip" gid="10000" fstype="cifs" path="carpeta_compartida (solo se indica el nombre del recurso compartido, no toda la ruta)" mountpoint="carpeta_en_cliente"/>```
+- **Ejemplo 1:**
+- ```<volume server=”servidor.empresa.local” fstype=”cifs” pgrp=”GLDAP” path=”comun(nombre recurso compartido)” mountpoint=”/home/empresa.local/%(USER)/datos(no hay que crear la carpeta de datos se crea automáticamente)”/>```
+- **Ejemplo 2:**
+- ```<volume server=”servidor.empresa.local” fstype=”cifs” pgrp=”GLDAP” path=”personales/%(USER)” mountpoint=”/home/empresa.local/%(USER)/personal”/> ```
 - (hay que hacerlo con las carpetas que querramos compartir)
 ![pam_mount](/img/pam_mount.png)
 ## Comprobación que todo está bien
