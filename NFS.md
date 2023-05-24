@@ -34,3 +34,5 @@
 - **apt install libpam-mount** para montar los archivos
 - **nano /etc/security/pam_mount.conf.xml** editamos este fichero e introducimos después de "volume definitions"
   - ```<volume server="servidor.ejemplo.local" fstype="nfs" sgrp="grupoLDAP" path"/mnt/carpeta_compartida" mountpoint="/home/ejemplo.local/½(USER)/carpeta_en_cliente"/>```
+- **Ejemplo**
+- ![pam_mount_2](/img/pam_mount_2.png)
