@@ -12,17 +12,17 @@
     - create mask = "para establecer los permisos de creación de archivos y carpetas"
     - directoy mask = "para especificar los permisos de creación de directorios"
   - **Ejemplo**
-  - [comun]
-  - comment = carpeta comun
-  - path = /mnt/comun
-  - writeable = yes
-  - guest ok = yes
-  - [personales]
-  - comment = carpeta personales
-  - path = /mnt/personales
-  - writeable = yes
-  - browseable = no
-  - guest ok = no
+    - [comun]
+    - comment = carpeta comun
+    - path = /mnt/comun
+    - writeable = yes
+    - guest ok = yes
+    - [personales]
+    - comment = carpeta personales
+    - path = /mnt/personales
+    - writeable = yes
+    - browseable = no
+    - guest ok = no
 - salimos del archivo y comprobamos con **testparm** que todo va bien.
 - reiniciamos samba con
   - **/etc/init.d/smbd restart**
