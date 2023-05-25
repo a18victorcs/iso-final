@@ -27,6 +27,7 @@
 - hacemos lo mismo con las subcarpetas
 - **apt install acl** instalamos las acl
 - **setfacl -m g:grupoLDAP:permisos /mnt/carpeta_compartida** para añadir permisos de otros grupos o grupos secundarios.
+- **setfacl -d -m g:grupoLDAP:permisos /mnt/carpeta_compartida** hay que poner también con -d.
 - **getfacl /mnt/carpeta_compartida1** para obtener y mostrar la lista de control de acceso
 - **chown usuarioLDAP.grupoLDAP /mnt/carpeta_compartirda** para cambiar el usuario y el grupo de una carpeta
 
