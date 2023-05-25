@@ -4,7 +4,7 @@
 
 ## Configuración del servidor
 - **nano /etc/exports** en este archivo tenemos que añadir:
-  - /mnt/comun 172.16.0.0/255.255.0.0(sync, rw, no_subtree_check,root_squash) "hay que añadir una línea como esta para cada carpeta que queramos compartir.
+  - /mnt/comun 172.16.0.0/255.255.0.0(sync, rw, no_subtree_check,root_squash) "hay que añadir una línea como esta para cada carpeta que queramos compartir. para que no de fallos hay que poner no_root_squash en la línea de comun.
 - **systemctl restart nfs-kernel-server.service** para reinciar el servicio nfs
 - **showmount -e** para ver las carpetas que estamos compartiendo.
 - **exportfs -ra** para que el servidor NFS tenga conocimiento de las exportaciones configuradas.
