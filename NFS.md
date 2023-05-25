@@ -30,6 +30,14 @@
 - **setfacl -d -m g:grupoLDAP:permisos /mnt/carpeta_compartida** hay que poner también con -d.
 - **getfacl /mnt/carpeta_compartida1** para obtener y mostrar la lista de control de acceso
 - **chown usuarioLDAP.grupoLDAP /mnt/carpeta_compartirda** para cambiar el usuario y el grupo de una carpeta
+- **Ejemplos:**
+```
+    -chgrp Galumnos /mnt/Comun/Alumnos
+    -chmod 770 /mnt/Comun/Alumnos
+    -setfacl -m g:Gprofesores:rwx /mnt/Comun/Alumnos
+    -setfacl -d -m g:Gprofesores:rwx /mnt/Comun/Alumnos
+    -chown alumnoasir1:GLDAP /mnt/Personales/AlumnoASIR1
+```
 
 ## En el cliente
 - **apt install libpam-mount** para montar los archivos
