@@ -36,6 +36,7 @@
 - **chgrp grupo /mnt/carpeta_compartida/carpeta_compartida** cambiamos los propietarios de las carpetas.
 - **chmod 700 /mnt/carpeta_compartida** cambiamos los permisos a las carpetas.
 - hacemos lo mismo con las subcarpetas
+- [Calculadora permisos]([URL del enlace](https://chmod-calculator.com/))
 ## Desde un cliente:
 - **apt install samba-common smbclient cifs-utils**
 - **smbclient -L servidor.ejemplo.local** para ver los recursos compartidos
